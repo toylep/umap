@@ -31,5 +31,4 @@ ENV PATH="/opt/venv/bin:$PATH"
 WORKDIR /srv/app
 RUN pip install uv
 
-
-RUN uv pip install -r requirements.txt
+RUN uv sync

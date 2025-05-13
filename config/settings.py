@@ -4,10 +4,10 @@ from typing import ClassVar
 
 
 class DBSettings(BaseSettings):
-    db_name: str = Field(..., env="DB_NAME")
+    postgres_db: str = Field(..., env="POSTGRES_DB")
     db_host: str = Field(..., env="DB_HOST")
-    db_password: str = Field(..., env="DB_PASSWORD")
-    db_user: str = Field(..., env="DB_USER")
+    postgres_password: str = Field(..., env="POSTGRES_PASSWORD")
+    postgres_user: str = Field(..., env="POSTGRES_USER")
 
     class Config:
         env_file = ".env"
